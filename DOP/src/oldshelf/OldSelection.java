@@ -1,3 +1,4 @@
+
 package oldshelf;
 
 public class OldSelection {
@@ -12,6 +13,15 @@ public class OldSelection {
         }
         return "";
     }
+
+    /*public static String getAgeOrTitle(Object o) {
+        return switch (o) {
+            case Comic comic -> comic.getTitle();  
+            case Fiction fiction -> fiction.getName();  
+            case TextBook textBook -> textBook.getSubject();  
+            default -> ""; 
+        };
+    }*/
 
 	public static void main(String[] args) {
 		
