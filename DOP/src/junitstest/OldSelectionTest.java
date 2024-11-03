@@ -1,7 +1,13 @@
-package oldshelf;
+package junitstest;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+
+import oldshelf.Comic;
+import oldshelf.Fiction;
+import oldshelf.FictionType;
+import oldshelf.OldSelection;
+import oldshelf.TextBook;
 
 public class OldSelectionTest {
 
@@ -9,26 +15,26 @@ public class OldSelectionTest {
     public void testGetAgeOrTitleWithComic() {
         Comic comic = new Comic("Superhero", 25);
         String result = OldSelection.getAgeOrTitle(comic);
-        assertEquals("Superhero", result, "The title of the comic should be returned.");
+        assertEquals("Superhero", result, "Correct outcome obtained.");
     }
 
     @Test
     public void testGetAgeOrTitleWithFiction() {
-        Fiction fiction = new Fiction("Mystery", FictionType.Tragedy);
+        Fiction fiction = new Fiction("Minds", FictionType.Tragedy);
         String result = OldSelection.getAgeOrTitle(fiction);
-        assertEquals("Mystery", result, "The name of the fiction should be returned.");
+        assertEquals("Minds", result, "Correct outcome obtained.");
     }
 
     @Test
     public void testGetAgeOrTitleWithTextBook() {
         TextBook textbook = new TextBook("Maths");
         String result = OldSelection.getAgeOrTitle(textbook);
-        assertEquals("Maths", result, "The subject of the textbook should be returned.");
+        assertEquals("Maths", result, "Correct outcome obtained.");
     }
 
     @Test
     public void testGetAgeOrTitleWithInvalidObject() {
         String result = OldSelection.getAgeOrTitle("NotABook");
-        assertEquals("", result, "The result should be an empty string for an invalid object.");
+        assertEquals("", result, "Expected empty string for NotABook instance");
     }
 }
